@@ -17,6 +17,14 @@ server.on('listening', function() {
 //	spawn('open', ['http://localhost:'+server.address().port]);
 });
 
+app.get('/files', function(req, res) {
+	var files =  fs.readdirSync('public/combined/');
+	//console.log(files);
+	files.shift();
+
+	res.send(JSON.stringify(files));
+});
+
 
 
 
@@ -24,6 +32,8 @@ var request = require('request');
 var S = require('string');
 var fs = require('fs');
 var path = require('path');
+
+
 
 function getStuff(after){
 //	request('http://www.reddit.com/r/perfectLoops.json?after='+after, function (error, response, body) {
@@ -79,4 +89,4 @@ function getStuff(after){
 		getStuff(afterPart);
 	});
 }
-getStuff("t3_34h323");
+//getStuff("t3_34h323");

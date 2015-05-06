@@ -4,7 +4,7 @@ var Data = require('./data-holder');
 
 var options = {
 	source: "http://www.reddit.com/r/perfectLoops.json",
-	fired: false
+	after: ""
 };
 
 var element = React.createElement(Data, options);

@@ -2,11 +2,12 @@ var React = require('react');
 var S = require('string');
 
 
+
 module.exports = React.createClass({
 	getInitialState: function(){ // React method
 		return {
 			images: [],
-			after: ""
+			after: "t3_319w8&count=50"
 		}
 	},
 	componentDidMount: function(){ // React method

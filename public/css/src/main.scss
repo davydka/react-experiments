@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	background: black;
 	text-align: center;
+	overflow: hidden;
 }
 
 .btn .sub-title {
@@ -11,4 +12,8 @@ body {
 div video {
 	max-width:100%;
 	height: 99vh;
+}
+
+div .video2 {
+	display: none;
 }
